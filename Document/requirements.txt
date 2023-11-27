@@ -1,0 +1,7 @@
+elasticsearch==8.4.0
+urllib3==1.26.16
+psycopg2
+tzlocal
+tzdata
+elastic-apm
+# Append any packages

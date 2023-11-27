@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  continuous-training:
+    container_name: python-cron-with-docker
+    hostname: python-cron-with-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    logging:
+      driver: 'json-file'
+      options:
+          max-size: '10m'
+    env_file: .env
+    volumes:
+      - ./logs:/app/logs
+    tty: true
